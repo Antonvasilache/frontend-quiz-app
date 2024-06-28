@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+/* DESIGN SYSTEM */
+
+:root {
+  --Purple: hsl(277, 91%, 56%);
+  --Dark-navy: hsl(216, 25%, 25%);
+  --Navy: hsl(215, 27%, 32%);
+  --Grey-navy: hsl(219, 13%, 44%);
+  --Light-bluish: hsl(216, 47%, 78%);
+  --Light-grey: hsl(220, 37%, 97%);
+  --Pure-white: hsl(0, 0%, 100%);
+  --Green: hsl(151, 70%, 50%);
+  --Red: hsl(0, 82%, 63%);
+}
+
+.display {
+  font-weight: 500;
+  font-size: 144px;
+  line-height: 100%;
+}
+
+.heading-l-bold {
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 100%;
+}
+
+.heading-l-regular {
+  font-weight: 300;
+  font-size: 64px;
+  line-height: 100%;
+}
+
+.heading-m {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 100%;
+}
+
+.heading-s {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 100%;
+}
+
+.body-m {
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 150%;
+}
+
+.body-s {
+  font-weight: normal;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 150%;
+}
+
+.toggle-button {
+  cursor: pointer;
+  border: none;
+}
+
+.toggle-button-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.large-button {
+  background-color: var(--Purple);
+  color: var(--Pure-white);
+  border: none;
+  padding: 32px;
+  border-radius: 24px;
+}
+
+.large-button:active,
+.large-button:hover {
+  cursor: pointer;
+  background-color: rgba(167, 41, 245, 0.5);
+}
+
+/* DESIGN SYSTEM */
+
+body {
+  background-color: var(--Light-grey);
+  color: var(--Dark-navy);
+}
+
+.container-wrapper {
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  width: 1160px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.title-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title-subheader {
+  color: var(--Grey-navy);
+}
+
+.categories,
+.answers {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.answers {
+  gap: 32px;
+}
+
+.answers-sub {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* .answers {
+  display: none; 
+} */
+
+.category,
+.answer {
+  background-color: var(--Pure-white);
+  width: 564px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 20px;
+  border-radius: 24px;
+  border: none;
+}
+
+.category:active,
+.category:hover,
+.answer:active,
+.answer:hover {
+  cursor: pointer;
+}
+
+.category:active,
+.category:hover {
+  background-color: #f6e7ff;
+}
+
+.answer-active {
+  outline: 3px solid var(--Purple);
+}
+
+.answer:active .variant-rectangle,
+.answer:hover .variant-rectangle {
+  background-color: #f6e7ff;
+  color: var(--Purple);
+}
+
+.answer-text {
+  width: 100%;
+  text-align: left;
+}
+
+.answer-correct {
+  outline: 3px solid var(--Green);
+}
+
+.answer-incorrect {
+  outline: 3px solid var(--Red);
+}
+
+.answer-error {
+  color: var(--Red);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  /* display: none; */
+}
+
+.selected-category {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 48px;
+}
+
+.question-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 452px;
+}
+
+.question {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+}
+
+.score {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 564px;
+}
+
+.score-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  background-color: var(--Pure-white);
+  padding: 48px;
+  border-radius: 24px;
+}
+
+.score-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.variant-rectangle {
+  color: var(--Grey-navy);
+  background-color: var(--Light-grey);
+  min-width: 56px;
+  min-height: 56px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rectangle-active {
+  color: var(--Pure-white);
+  background-color: var(--Purple);
+}
+
+.rectangle-correct {
+  color: var(--Pure-white);
+  background-color: var(--Green);
+}
+
+.rectangle-incorrect {
+  color: var(--Pure-white);
+  background-color: var(--Red);
+}
