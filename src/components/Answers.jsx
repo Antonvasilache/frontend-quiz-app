@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
 import { useQuiz } from "../context/QuizContext";
 import LargeButton from "./LargeButton";
+import { useTheme } from "../context/ThemeContext";
 
 function Answers() {
   const [active, setActive] = useState();
   const { index, questions, answer, isAnswered, isCorrect, dispatch } =
     useQuiz();
+  const { isDarkMode } = useTheme();
+
   const options = questions[index].options;
 
   const optionLetters = ["A", "B", "C", "D"];
@@ -45,7 +48,7 @@ function Answers() {
                 : !isCorrect && option === answer && isAnswered
                 ? "answer-incorrect"
                 : ""
-            }`}
+            } ${isDarkMode ? "category-dark-theme" : ""}`}
             key={option}
             onClick={() => {
               if (!isAnswered || (isAnswered && !answer)) {

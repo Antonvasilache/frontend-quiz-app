@@ -2,7 +2,6 @@ import data from "../../data.json";
 import { createContext, useContext, useReducer } from "react";
 
 const quizzes = data.quizzes;
-console.log(quizzes);
 
 const categories = quizzes.map((quiz) => ({
   title: quiz.title,

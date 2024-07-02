@@ -1,9 +1,11 @@
 import { useQuiz } from "../context/QuizContext";
+import { useTheme } from "../context/ThemeContext";
 import LargeButton from "./LargeButton";
 import SelectedCategory from "./SelectedCategory";
 
 function Score() {
   const { score, numQuestions, dispatch } = useQuiz();
+  const { isDarkMode } = useTheme();
 
   function handleReset(e) {
     e.preventDefault();
@@ -13,7 +15,9 @@ function Score() {
 
   return (
     <div className="score">
-      <div className="score-card">
+      <div
+        className={`score-card ${isDarkMode ? "score-card-dark-theme" : ""}`}
+      >
         <SelectedCategory />
         <div className="score-text">
           <p className="display">{score}</p>

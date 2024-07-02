@@ -5,8 +5,17 @@ function ToggleButton() {
 
   return (
     <div className="toggle-button-wrapper">
-      <img src="/icon-sun-dark.svg" />
-      <button className="toggle-button" onClick={toggleTheme}>
+      {isDarkMode ? (
+        <img src="/icon-sun-light.svg" />
+      ) : (
+        <img src="/icon-sun-dark.svg" />
+      )}
+      <button
+        className={`toggle-button ${
+          isDarkMode ? "toggle-button-dark-theme" : ""
+        }`}
+        onClick={toggleTheme}
+      >
         <svg
           width="48"
           height="28"
@@ -15,10 +24,16 @@ function ToggleButton() {
           xmlns="http://www.w3.org/2000/svg"
         >
           <rect width="48" height="28" rx="14" fill="#A729F5" />
-          <circle cx={isDarkMode ? "34" : "14"} cy="14" r="10" fill="white" />
+          <g className="toggle-circle">
+            <circle cx="14" cy="14" r="10" fill="white" />
+          </g>
         </svg>
       </button>
-      <img src="/icon-moon-dark.svg" />
+      {isDarkMode ? (
+        <img src="/icon-moon-light.svg" />
+      ) : (
+        <img src="/icon-moon-dark.svg" />
+      )}
     </div>
   );
 }

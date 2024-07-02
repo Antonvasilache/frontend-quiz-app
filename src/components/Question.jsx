@@ -1,7 +1,10 @@
 import { useQuiz } from "../context/QuizContext";
+import { useTheme } from "../context/ThemeContext";
 
 function Question() {
   const { index, numQuestions, questions } = useQuiz();
+  const { isDarkMode } = useTheme();
+
   return (
     <div className="question-wrapper">
       <div className="question">
@@ -18,7 +21,13 @@ function Question() {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <rect width="465" height="16" rx="8" fill="white" />
+          <rect
+            width="465"
+            height="16"
+            rx="8"
+            fill={!isDarkMode ? "white" : ""}
+            className={`${isDarkMode ? "progress-bar-dark-theme" : ""}`}
+          />
           <rect
             x="4"
             y="4"
