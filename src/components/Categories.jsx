@@ -1,10 +1,11 @@
 import { useQuiz } from "../context/QuizContext";
 import { useTheme } from "../context/ThemeContext";
-import { getImageURL } from "../helpers/image-helper";
 
 function Categories() {
   const { dispatch, categories } = useQuiz();
   const { isDarkMode } = useTheme();
+
+  console.log(categories);
 
   return (
     <form className="categories">
@@ -17,7 +18,7 @@ function Categories() {
           onClick={() => dispatch({ type: "start", payload: category.title })}
         >
           <img
-            src={getImageURL(`.${category.icon}`)}
+            src={category.icon.slice(1)}
             alt={category.title}
             className={`category-img ${category.title.toLowerCase()}`}
           />

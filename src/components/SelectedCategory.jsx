@@ -1,5 +1,4 @@
 import { useQuiz } from "../context/QuizContext";
-import { getImageURL } from "../helpers/image-helper";
 
 function SelectedCategory() {
   const { categories, category } = useQuiz();
@@ -13,7 +12,7 @@ function SelectedCategory() {
       {category && (
         <>
           <img
-            src={getImageURL(`.${displayedCategory}`)}
+            src={displayedCategory.slice(1)}
             alt={displayedCategory}
             className={`category-img ${category.toLowerCase()}`}
           />
