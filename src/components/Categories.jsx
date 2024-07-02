@@ -19,7 +19,7 @@ function Categories() {
         >
           <img
             src={category.icon.slice(1)}
-            alt={category.title}
+            alt={`${category.title} icon`}
             className={`category-img ${category.title.toLowerCase()}`}
           />
           <span>{category.title}</span>

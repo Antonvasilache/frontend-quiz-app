@@ -6,9 +6,9 @@ function ToggleButton() {
   return (
     <div className="toggle-button-wrapper">
       {isDarkMode ? (
-        <img src="/icon-sun-light.svg" />
+        <img src="/icon-sun-light.svg" alt="Sun Icon light theme" />
       ) : (
-        <img src="/icon-sun-dark.svg" />
+        <img src="/icon-sun-dark.svg" alt="Sun Icon dark theme" />
       )}
       <button
         className={`toggle-button ${
@@ -30,9 +30,9 @@ function ToggleButton() {
         </svg>
       </button>
       {isDarkMode ? (
-        <img src="/icon-moon-light.svg" />
+        <img src="/icon-moon-light.svg" alt="Moon Icon light theme" />
       ) : (
-        <img src="/icon-moon-dark.svg" />
+        <img src="/icon-moon-dark.svg" alt="Moon Icon dark theme" />
       )}
     </div>
   );
