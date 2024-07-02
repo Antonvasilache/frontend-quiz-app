@@ -19,16 +19,20 @@
   --Red: hsl(0, 82%, 63%);
 }
 
-.display {
+.display,
+.heading-l-bold,
+.heading-m,
+.heading-s {
   font-weight: 500;
-  font-size: 144px;
   line-height: 100%;
 }
 
+.display {
+  font-size: 144px;
+}
+
 .heading-l-bold {
-  font-weight: 500;
   font-size: 64px;
-  line-height: 100%;
 }
 
 .heading-l-regular {
@@ -38,51 +42,26 @@
 }
 
 .heading-m {
-  font-weight: 500;
   font-size: 36px;
-  line-height: 100%;
 }
 
 .heading-s {
-  font-weight: 500;
   font-size: 28px;
-  line-height: 100%;
+}
+
+.body-m,
+.body-s {
+  line-height: 150%;
+  font-weight: normal;
 }
 
 .body-m {
-  font-weight: normal;
   font-size: 24px;
-  line-height: 150%;
 }
 
 .body-s {
-  font-weight: normal;
   font-style: italic;
   font-size: 20px;
-  line-height: 150%;
-}
-
-.toggle-button-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.toggle-button {
-  cursor: pointer;
-  border: none;
-}
-
-.toggle-button-dark-theme {
-  background-color: var(--Dark-navy);
-}
-
-.toggle-circle {
-  transition: transform 0.3s ease;
-}
-
-.toggle-button-dark-theme .toggle-circle {
-  transform: translateX(20px);
 }
 
 .large-button {
@@ -121,9 +100,14 @@
   background-image: url("./assets/pattern-background-desktop-dark.svg");
 }
 
-.container-wrapper {
+.container-wrapper,
+.container,
+.content {
   display: flex;
   flex-direction: column;
+}
+
+.container-wrapper {
   place-content: center;
   align-items: center;
   min-height: 100vh;
@@ -131,15 +115,11 @@
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
   align-items: center;
   padding: 2rem;
 }
 
 .content {
-  display: flex;
-  flex-direction: column;
   gap: 100px;
   width: 1160px;
 }
@@ -149,20 +129,45 @@
   justify-content: space-between;
 }
 
+.toggle-button-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.toggle-button {
+  cursor: pointer;
+  border: none;
+}
+
+.toggle-button-dark-theme {
+  background-color: var(--Dark-navy);
+}
+
+.toggle-circle {
+  transition: transform 0.3s ease;
+}
+
+.toggle-button-dark-theme .toggle-circle {
+  transform: translateX(20px);
+}
+
 .main {
   display: flex;
   justify-content: space-between;
 }
 
-.title {
+.title,
+.title-header {
   display: flex;
   flex-direction: column;
+}
+
+.title {
   gap: 48px;
 }
 
 .title-header {
-  display: flex;
-  flex-direction: column;
   gap: 8px;
 }
 
@@ -171,7 +176,8 @@
 }
 
 .categories,
-.answers {
+.answers,
+.answers-sub {
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -180,16 +186,6 @@
 .answers {
   gap: 32px;
 }
-
-.answers-sub {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-/* .answers {
-  display: none; 
-} */
 
 .category,
 .answer {
@@ -203,11 +199,6 @@
   border: none;
 }
 
-.category-dark-theme {
-  background-color: var(--Navy);
-  color: var(--Pure-white);
-}
-
 .category:active,
 .category:hover,
 .answer:active,
@@ -218,6 +209,16 @@
 .category:active,
 .category:hover {
   background-color: #f6e7ff;
+}
+
+.category-dark-theme {
+  background-color: var(--Navy);
+  color: var(--Pure-white);
+}
+
+.category-dark-theme:active,
+.category-dark-theme:hover {
+  background-color: var(--Navy);
 }
 
 .category-img {
@@ -272,7 +273,6 @@
   justify-content: center;
   align-items: center;
   gap: 8px;
-  /* display: none; */
 }
 
 .progress-bar {
@@ -291,29 +291,30 @@
   padding: 48px;
 }
 
-.question-wrapper {
+.question-wrapper,
+.question,
+.score,
+.score-card,
+.score-text {
   display: flex;
   flex-direction: column;
+}
+
+.question-wrapper {
   justify-content: space-between;
   height: 452px;
 }
 
 .question {
-  display: flex;
-  flex-direction: column;
   gap: 27px;
 }
 
 .score {
-  display: flex;
-  flex-direction: column;
   gap: 32px;
   width: 564px;
 }
 
 .score-card {
-  display: flex;
-  flex-direction: column;
   align-items: center;
   gap: 40px;
   background-color: var(--Pure-white);
@@ -327,8 +328,6 @@
 }
 
 .score-text {
-  display: flex;
-  flex-direction: column;
   align-items: center;
   gap: 16px;
 }
@@ -344,18 +343,21 @@
   align-items: center;
 }
 
-.rectangle-active {
+.rectangle-active,
+.rectangle-correct,
+.rectangle-incorrect {
   color: var(--Pure-white);
+}
+
+.rectangle-active {
   background-color: var(--Purple);
 }
 
 .rectangle-correct {
-  color: var(--Pure-white);
   background-color: var(--Green);
 }
 
 .rectangle-incorrect {
-  color: var(--Pure-white);
   background-color: var(--Red);
 }
 
