@@ -90,10 +90,19 @@
 /* DESIGN SYSTEM */
 
 body {
+}
+
+.app {
   background-color: var(--Light-grey);
   color: var(--Dark-navy);
   background-image: url("./assets/pattern-background-desktop-light.svg");
   background-size: cover;
+}
+
+.dark-theme {
+  background-color: var(--Navy);
+  color: var(--Pure-white);
+  background-image: url("./assets/pattern-background-desktop-dark.svg");
 }
 
 .container-wrapper {
