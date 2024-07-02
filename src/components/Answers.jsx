@@ -39,16 +39,34 @@ function Answers() {
             type="button"
             className={`answer heading-s ${
               active === index ? "answer-active" : ""
+            } ${
+              isCorrect && option === answer
+                ? "answer-correct"
+                : !isCorrect && option === answer && isAnswered
+                ? "answer-incorrect"
+                : ""
             }`}
             key={option}
             onClick={() => {
-              if (!isAnswered) {
+              if (!isAnswered || (isAnswered && !answer)) {
                 setActive(index);
                 dispatch({ type: "selectAnswer", payload: option });
               }
             }}
           >
-            <div className="variant-rectangle">{optionLetters[index]}</div>
+            <div
+              className={`variant-rectangle ${
+                active === index ? "rectangle-active" : ""
+              } ${
+                isCorrect && option === answer
+                  ? "rectangle-correct"
+                  : !isCorrect && option === answer && isAnswered
+                  ? "rectangle-incorrect"
+                  : ""
+              }`}
+            >
+              {optionLetters[index]}
+            </div>
             <span className="answer-text">{option}</span>
 
             {isCorrect && option === answer && (

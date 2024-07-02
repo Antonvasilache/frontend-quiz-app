@@ -12,7 +12,11 @@ function Categories() {
           key={category.title}
           onClick={() => dispatch({ type: "start", payload: category.title })}
         >
-          <img src={getImageURL(`.${category.icon}`)} alt={category.title} />
+          <img
+            src={getImageURL(`.${category.icon}`)}
+            alt={category.title}
+            className={`category-img ${category.title.toLowerCase()}`}
+          />
           <span>{category.title}</span>
         </button>
       ))}

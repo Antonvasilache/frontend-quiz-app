@@ -15,6 +15,7 @@ function SelectedCategory() {
           <img
             src={getImageURL(`.${displayedCategory}`)}
             alt={displayedCategory}
+            className={`category-img ${category.toLowerCase()}`}
           />
           <span className="heading-s">{category}</span>
         </>

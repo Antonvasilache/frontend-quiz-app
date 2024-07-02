@@ -10,7 +10,7 @@ function Question() {
         </p>
         <p className="heading-m">{questions[index].question}</p>
       </div>
-      <div>
+      <div className="progress-bar">
         <svg
           width="465"
           height="16"
@@ -19,7 +19,14 @@ function Question() {
           xmlns="http://www.w3.org/2000/svg"
         >
           <rect width="465" height="16" rx="8" fill="white" />
-          <rect x="4" y="4" width="300" height="8" rx="4" fill="#A729F5" />
+          <rect
+            x="4"
+            y="4"
+            width={index * 46.5}
+            height="8"
+            rx="4"
+            fill="#A729F5"
+          />
         </svg>
       </div>
     </div>
