@@ -116,7 +116,8 @@
 
 .container {
   align-items: center;
-  padding: 2rem;
+  padding: 32px;
+  padding-bottom: 220px;
 }
 
 .content {
@@ -288,7 +289,6 @@
   display: flex;
   align-items: center;
   gap: 24px;
-  padding: 48px;
 }
 
 .question-wrapper,
