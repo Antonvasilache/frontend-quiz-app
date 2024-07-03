@@ -7,7 +7,6 @@ function LargeButton({ children, type, handleNext, handleReset }) {
     );
 
   if (type === "button" && handleReset) {
-    console.log("reset button");
     return (
       <button
         className="large-button heading-s"

@@ -3,9 +3,7 @@ import { useTheme } from "../context/ThemeContext";
 
 function Categories() {
   const { dispatch, categories } = useQuiz();
-  const { isDarkMode } = useTheme();
-
-  console.log(categories);
+  const { isDarkMode } = useTheme(); 
 
   return (
     <form className="categories">
